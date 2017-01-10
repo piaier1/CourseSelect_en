@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CourseSelect(en) 
 
 ### [Tutorial1](http://blog.csdn.net/ppp8300885/article/details/52629909) 
@@ -103,3 +104,6 @@ If you think good of this repertory, star it ~
 
 
 
+=======
+# CourseSelect_en
+>>>>>>> 2e84fd94ece01e295353580cda7aed02bdd5df83
