@@ -3,6 +3,8 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
 
       t.string :name
+      t.string :gender
+      t.string :country_code
       t.string :email
       t.string :num
       t.string :major
@@ -13,7 +15,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text   :path
 
       t.boolean :admin, default: false
-      t.boolean :teacher,default: false
+      t.boolean :teacher, default: false
       t.timestamps null: false
     end
 

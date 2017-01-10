@@ -10,7 +10,7 @@
       <div class="panel panel-primary filterable">
         <div class="panel-heading">
           <% if teacher_logged_in? %><h3 class="panel-title">授课列表</h3><% end %>
-          <% if student_logged_in? %><h3 class="panel-title">已选课程</h3><% end %>
+          <% if student_logged_in? %><h3 class="panel-title">You have selected <span><%= current_user.courses.length %></span> courses</h3><% end %>
         </div>
 
         <div class="panel-body">

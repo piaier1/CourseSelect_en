@@ -11,6 +11,26 @@
       </div>
     </div>
 
+  <div class="form-group">
+      <%= f.label "Gender", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group" style="padding-left:15%">
+            <%= f.radio_button :gender, 'Male',  class:'radio-inline' %> Male
+            <%= f.radio_button :gender, 'Female', class:'radio-inline' %> Female
+        </div>
+    </div>
+      
+    </div>
+    <div class="form-group" >
+      <%= f.label "Country", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group" >
+          <div class="input-group-addon"><span class="glyphicon glyphicon-flag" ></span></div>
+          <%= f.country_select :country_code, class:'form-control' %>
+        </div>
+      </div>
+    </div>
+
     <div class="form-group">
       <%= f.label "Email", class: 'col-sm-3 control-label' %>
       <div class="col-sm-9">

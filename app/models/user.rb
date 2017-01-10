@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   attr_accessor :remember_token
   validates :name, presence: true, length: {maximum: 50}
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
-
+  # attr_accessor :gender
+  
   has_many :grades
   has_many :courses, through: :grades
 

@@ -6,6 +6,8 @@ gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'bcrypt', '~> 3.1.11'
 gem 'faker', '~> 1.6.6'
 gem 'rails_admin', '~> 0.8.1'
+gem 'country_select'
+gem 'table_print'
 
 # gem 'carrierwave'
 # gem 'paperclip'
