@@ -3,13 +3,18 @@ class GradesController < ApplicationController
   before_action :teacher_logged_in, only: [:update]
 
   def update
-    @grade=Grade.find_by_id(params[:id])
-    if @grade.update_attributes!(:grade => params[:grade][:grade])
-      flash={:success => "The score of #{@grade.user.name} in #{@grade.course.name} has been modified to #{@grade.grade}"}
+    if 0 <= params[:grade][:grade].to_i && params[:grade][:grade].to_i <= 100
+        @grade=Grade.find_by_id(params[:id])
+        if @grade.update_attributes!(:grade => params[:grade][:grade])
+          flash={:success => "The score of #{@grade.user.name} in #{@grade.course.name} has been modified to #{@grade.grade}"}
+        else
+          flash={:danger => "Wrong updates, try again"}
+        end
+        redirect_to grades_path(course_id: params[:course_id]), flash: flash
     else
-      flash={:danger => "Wrong updates, try again"}
+        flash={:danger => "Grade must be between 0 and 100"}
+        redirect_to grades_path(course_id: params[:course_id]), flash: flash
     end
-    redirect_to grades_path(course_id: params[:course_id]), flash: flash
   end
 
   def index
